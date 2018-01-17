@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Exemple uploadHBR Jquery</title>
+    <meta name="language" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link id="bootstrap-styleshhet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../dist/css/style.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../dist/js/modernizr.min.js"></script>
+    <script src="../dist/js/uploadHBR.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            uploadHBR.init({
+                "target": "#uploads",
+                "max": 18,
+                "textNew": "ADD",
+                "textTitle": "Click here or drag to upload an imagem",
+                "textTitleRemove": "Click here remove the imagem"
+            });
+            $('#reset').click(function () {
+                uploadHBR.reset('#uploads');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12 text-center">
+                <form role="form" action="upload.php" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="col-md-12 col-lg-12 col-xs-12" id="columns">
+                                <h3 class="form-label">Select the images</h3>
+                                <div class="desc"><p class="text-center">or drag to box</p></div>
+                                <div id="uploads"><!-- Upload Content --></div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <button class="btn btn-danger btn-lg pull-left" id="reset" type="button" ><i class="fa fa-history"></i> Clear</button>
+                            <button class="btn btn-primary btn-lg pull-right" type="submit" ><i class="fa fa-upload"></i> Upload </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
