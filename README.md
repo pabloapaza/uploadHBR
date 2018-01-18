@@ -3,6 +3,9 @@
 ## Description
 File Upload with multiple file selection, drag&amp;drop support, mobile support, and preview images for jQuery.  
 
+## Demo
+1. https://jsfiddle.net/m8w7o3f2/1/
+
 ## Features
 * **Multiple file upload:**  
   Allows to select multiple files at once and upload them simultaneously.
